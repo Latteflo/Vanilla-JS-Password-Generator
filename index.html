@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/742b021d68.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section>
+      <div class="modes">
+        <button onclick="setMode(this.id)" id="light">LIGHT</button>
+        <button onclick="setMode(this.id)" id="dark">DARK</button>
+      </div>
+      <div class="color">
+        <button onclick="setColor(this.id)" id="purple"></button>
+        <button onclick="setColor(this.id)" id="cyan"></button>
+        <button onclick="setColor(this.id)" id="green"></button>
+        <button onclick="setColor(this.id)" id="yellow"></button>
+        <button onclick="setColor(this.id)" id="red"></button>
+      </div>
+      <div class="top">
+        <h1>
+          Generate a <br />
+          <span id="emp" class="emphasis">random password</span>
+        </h1>
+        <p class="slogan">Never use an insecure password again.</p>
+        <div class="passwordflex">
+          <div>
+            <button class="generate" onclick="generate()">
+              <img class="icon" src="icon.png" />
+              Generate passwords
+            </button>
+          </div>
+          <div class="pwlenght">
+            <p>Password Lenght:</p>
+            <form id="pwLenght" class="radio">
+              <div class="radioflex">
+                <label id="pw10-el" for="10">10</label>
+                <input
+                  name="pwlenght"
+                  type="radio"
+                  id="10"
+                  value="10"
+                  checked
+                />
+                <label id="pw12-el" for="12">12</label>
+                <input name="pwlenght" type="radio" id="12" value="12" />
+              </div>
+              <div class="radioflex">
+                <label id="pw14-el" for="14">14</label>
+                <input name="pwlenght" type="radio" id="14" value="14" />
+                <label id="pw16-el" for="16">16</label>
+                <input name="pwlenght" type="radio" id="16" value="16" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <p class="line"></p>
+      <p class="instructions">Click on a password to copy to clipboard</p>
+      <div class="buttom">
+        <div class="flex">
+          <button onclick="copyValue(this.id)" class="password" id="p1-el">
+            ...
+          </button>
+          <button onclick="copyValue(this.id)" class="password" id="p2-el">
+            ...
+          </button>
+        </div>
+        <div class="flex">
+          <button onclick="copyValue(this.id)" class="password" id="p3-el">
+            ...
+          </button>
+          <button onclick="copyValue(this.id)" class="password" id="p4-el">
+            ...
+          </button>
+        </div>
+      </div>
+      <small>
+        <a href="https://github.com/Latteflo/Unit-Convertor">
+          Open Source code made by Florentina Simion
+        </a></small
+      >
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
