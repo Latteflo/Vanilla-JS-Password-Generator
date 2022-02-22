@@ -15,7 +15,9 @@ function copyValue(clicked_id) {
 
   el.select()
   document.execCommand("copy")
-  document.body.removeChild(el)
+  alert("Copied!");
+  document.body.removeChild(el) 
+  
 }
 
 function storeRadioValue() {
